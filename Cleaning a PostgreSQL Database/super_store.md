@@ -37,6 +37,7 @@ In this project, i will work with data from hypothetical Super Store. I used a d
 | `sub_category` | Sub Category Product belongs to | `TEXT` |
 | `product_name` | Detailed Name of the Product | `TEXT` |
 
+```
 -- top_five_products_each_category
 SELECT * FROM (
 	SELECT p.category, p.product_name, 
@@ -48,3 +49,4 @@ SELECT * FROM (
 		ON o.product_id = p.product_id
 	GROUP BY p.category, p.product_name) as data
 	WHERE product_rank < 6
+```
